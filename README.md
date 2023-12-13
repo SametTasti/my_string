@@ -1,2 +1,2 @@
 # my_string
-A C++ string implementation, designed to impress
+A C++ string implementation, designed to impress.
