@@ -11,8 +11,8 @@ protected:
     std::size_t size;
 
 public:
-    virtual const char& operator[](std::size_t) = 0;
-    virtual const char* to_c_str() = 0;
+    virtual const char& operator[](std::size_t) const = 0;
+    virtual const char* to_c_str() const = 0;
     std::size_t length() const;
     bool empty() const;
     virtual void clear() = 0;
@@ -21,6 +21,12 @@ public:
     virtual int compare(const my_string&) const = 0;
     virtual int compare(const std::string&) const = 0;
     virtual int compare(const char*) const = 0;
+    virtual bool operator==(const my_string&) const = 0;
+    virtual bool operator!=(const my_string&) const = 0;
+    virtual bool operator<(const my_string&) const = 0;
+    virtual bool operator>(const my_string&) const = 0;
+    virtual bool operator<=(const my_string&) const = 0;
+    virtual bool operator>=(const my_string&) const = 0;
     virtual std::size_t find(const my_string&) const = 0;
     virtual std::size_t find(const std::string&) const = 0;
     virtual std::size_t find(const char*) const = 0;
