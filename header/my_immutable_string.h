@@ -4,6 +4,7 @@
 #include "my_string.h"
 #include <string>
 #include <functional>
+#include <cstddef>
 
 class my_immutable_string : public my_string
 {
@@ -11,7 +12,6 @@ class my_immutable_string : public my_string
 
 public:
     // Constructors
-    my_immutable_string();
     my_immutable_string(const char*);
     my_immutable_string(const std::string&);
     my_immutable_string(const my_immutable_string&);
