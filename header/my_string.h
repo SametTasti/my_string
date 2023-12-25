@@ -32,6 +32,11 @@ public:
     virtual std::size_t find(const std::string&) const = 0;
     virtual std::size_t find(const char*) const = 0;
 
+    // Concatenation methods
+    virtual my_string operator+(const my_string&) const = 0;
+    virtual my_string operator+(const std::string&) const = 0;
+    virtual my_string operator+(const char*) const = 0;
+
     // Mutator methods
     virtual void clear() = 0;
     virtual void swap(my_string&) = 0;
