@@ -3,6 +3,7 @@
 
 #include "my_string.h"
 #include <string>
+#include <cstring>
 #include <functional>
 #include <cstddef>
 
@@ -35,6 +36,11 @@ public:
 
     // Print to console method
     void print(std::ostream&) const override final;
+
+    // Concatenation methods
+    my_string operator+(const my_string&) const override final;
+    my_string operator+(const std::string&) const override final;
+    my_string operator+(const char*) const override final;
 
     // String comparison methods
     int compare(const my_string&) const override final;
