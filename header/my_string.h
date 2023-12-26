@@ -5,7 +5,8 @@
 #include <cstddef>
 #include <string>
 
-class my_string : public my_printable {
+class my_string : public my_printable
+{
 protected:
     std::size_t size;
 
@@ -18,15 +19,15 @@ public:
     virtual std::size_t find_first(const my_string&) const = 0;
     virtual std::size_t find_first(const std::string&) const = 0;
     virtual std::size_t find_first(const char*) const = 0;
-    virtual my_string substr(std::size_t, std::size_t len = std::string::npos) const = 0;
+    virtual my_string* substr(std::size_t, std::size_t len = std::string::npos) const = 0;
 
     virtual void clear() = 0;
     virtual void swap(my_string&) = 0;
     virtual void swap(std::string&) = 0;
 
-    virtual my_string operator+(const my_string&) const = 0;
-    virtual my_string operator+(const std::string&) const = 0;
-    virtual my_string operator+(const char*) const = 0;
+    virtual my_string* operator+(const my_string&) const = 0;
+    virtual my_string* operator+(const std::string&) const = 0;
+    virtual my_string* operator+(const char*) const = 0;
 
     virtual void print(std::ostream&) const override = 0;
 
