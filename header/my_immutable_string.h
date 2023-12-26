@@ -29,9 +29,9 @@ public:
     const char& front() const;
     const char& back() const;
     const char* to_c_str() const override final;
-    std::size_t find(const my_string&) const override final;
-    std::size_t find(const std::string&) const override final;
-    std::size_t find(const char*) const override final;
+    std::size_t find_first(const my_string&) const override final;
+    std::size_t find_first(const std::string&) const override final;
+    std::size_t find_first(const char*) const override final;
     my_immutable_string substr(std::size_t pos, std::size_t len = std::string::npos) const;
 
     // Print to console method
