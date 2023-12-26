@@ -12,7 +12,6 @@ class my_immutable_string : public my_string
     const char* immutable_string;
 
 public:
-
     my_immutable_string(const char*);
     my_immutable_string(const std::string&);
     my_immutable_string(const my_immutable_string&);
@@ -28,15 +27,15 @@ public:
     std::size_t find_first(const my_string&) const override final;
     std::size_t find_first(const std::string&) const override final;
     std::size_t find_first(const char*) const override final;
-    my_string substr(std::size_t, std::size_t len = std::string::npos) const override final;
+    my_string* substr(std::size_t, std::size_t len = std::string::npos) const override final;
 
     void clear() override final;
     void swap(my_string&) override final;
     void swap(std::string&) override final;
 
-    my_string operator+(const my_string&) const override final;
-    my_string operator+(const std::string&) const override final;
-    my_string operator+(const char*) const override final;
+    my_string* operator+(const my_string&) const override final;
+    my_string* operator+(const std::string&) const override final;
+    my_string* operator+(const char*) const override final;
 
     void print(std::ostream&) const override final;
 
