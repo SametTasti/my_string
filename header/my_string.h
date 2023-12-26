@@ -28,9 +28,9 @@ public:
     virtual bool operator>=(const my_string&) const = 0;
 
     // Search methods
-    virtual std::size_t find(const my_string&) const = 0;
-    virtual std::size_t find(const std::string&) const = 0;
-    virtual std::size_t find(const char*) const = 0;
+    virtual std::size_t find_first(const my_string&) const = 0;
+    virtual std::size_t find_first(const std::string&) const = 0;
+    virtual std::size_t find_first(const char*) const = 0;
 
     // Concatenation methods
     virtual my_string operator+(const my_string&) const = 0;
